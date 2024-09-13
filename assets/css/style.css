@@ -63,6 +63,7 @@ input::placeholder{
 }
 
 .navbar {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -129,62 +130,106 @@ input::placeholder{
     display: none; /* Hide menu icon on desktop */
 }
 
-/* Tablet and Phone Styles */
-@media (max-width: 1336px) {
-    
-    .navbar-buttons {
-        display: none; /* Hide navigation buttons */
+@media(max-width: 1366px){
+    .logo{
+        width: 128px;
+        height: 118px;
+        left: 80px;
+    }
+
+    .menu-icon {
+        position: absolute;
+        display: flex;
+        top: 30px;
+        right: 20px;
+        left: auto;
+        z-index: 3;
+    }
+
+    .navbar-buttons{
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .navbar{
+        height: 96px;
+        left: -282px;
+        justify-content: space-between;
+    }
+
+    .navbar-background{
+        height: 96px;
+    }
+
+    .navbar-background img{
+        height: 96px;
+        
     }
 
     .logo{
         width: 128px;
         height: 118px;
+        top: -27px;
+        left: 80px;
+    }
+
+    .logo img{
+        width: 100%;
+        height: 100%;
     }
 
     .menu-icon {
-        display: block; /* Show menu icon */
-        cursor: pointer;
         position: absolute;
-        right: 60px;
-        top: 35px;
+        display: flex;
+        top: 30px;
+        right: 20px;
+        left: auto;
         z-index: 3;
     }
 
-    .menu-icon img {
-        width: 24.8px; /* Adjust size as needed */
-        height: 20px;
+    .navbar-buttons{
+        display: none;
     }
 }
 
 @media (max-width: 768px) {
-    .logo{
-        width: 78px;
-        height: 72px;
+    .navbar{
+        height: 67px;
+        justify-content: space-between;
     }
 
-    .menu-icon{
-        top: 27px;
+    .navbar-background{
+        height: 81px;
+    }
+
+    .navbar-background img{
+        height: 81px;
+    }
+
+    .logo{
+        width: 78px;
+        height: auto;
+        top: 0;
+        left: 20px;
+    }
+
+    .menu-icon {
+        position: absolute;
+        display: flex;
+        top: 20px;
+        right: 20px;
+        left: auto;
+        z-index: 3;
     }
 
     .menu-icon img {
         width: 15px;
         height: 15px;
     }
-}
 
-@media (max-width: 420px) {
-    .logo{
-        width: 78px;
-        height: 72px;
-    }
-
-    .menu-icon{
-        top: 10px;
-    }
-
-    .menu-icon img {
-        width: 15px;
-        height: 15px;
+    .navbar-buttons{
+        display: none;
     }
 }
 
@@ -211,6 +256,20 @@ input::placeholder{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 1366px) {
+    .play-button img{
+        width: 86px;
+        height: 83px;
+    }
+}
+
+@media (max-width: 768px) {
+    .play-button img{
+        width: 50px;
+        height: 48px;
+    }
 }
 
 .homepage-description {
@@ -339,6 +398,9 @@ input::placeholder{
 
 /* Responsive styles for mobile */
 @media (max-width: 768px) {
+    .collage{
+        margin-top: 80px;
+    }
     .collage-row {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -454,9 +516,13 @@ input::placeholder{
     background: #ff8a00;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (max-width: 1366px){
+    .header{
+        font-size: 18px;
+    }
+
     .options {
-        gap: 20px; /* Adjust gap for medium screens */
+        gap: 142px; /* Adjust gap for medium screens */
         margin: 40px auto; /* Adjust margin for medium screens */
     }
 
@@ -476,6 +542,33 @@ input::placeholder{
     .option-1, .option-2 {
         width: 100%; /* Full width for each option */
         max-width: 600px; /* Limit maximum width for better fit */
+    }
+
+    .option-button{
+        margin-top: 30px;
+    }
+
+    .option-button button {
+        /* Box model */
+        display: flex;
+        margin: 0 auto 0;
+        justify-content: center;
+        width: 233px;
+        height: 50px;
+        border-radius: 360px;
+        text-align: center;
+        align-items: center;
+        border: none;
+        outline: none;
+    
+        /* Typography */
+        font-family: "Montserrat";
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+    
+        /* Visual */
+        background: #ffa800;
     }
 }
 
@@ -591,8 +684,18 @@ input::placeholder{
     background: #ffa800;
 }
 
+@media (max-width: 1366px) {
+    .contact-form{
+        margin-top: 150px;
+    }
+}
+
 /* Tablet and mobile view */
 @media (max-width: 768px) {
+    .contact-form{
+        margin-top: 120px;
+    }
+
     .form {
         width: 100%;
         padding: 0 15px; /* Reduced padding for more space */
