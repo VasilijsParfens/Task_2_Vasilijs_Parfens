@@ -300,6 +300,7 @@ input::placeholder{
 .collage {
     position: relative;
     width: 100%;
+    margin-top: 150px;
 }
 
 .collage-top, .collage-bottom {
@@ -829,11 +830,10 @@ input::placeholder{
     }
 }
 
-
 .footer {
     display: flex;
     justify-content: center;
-    margin-top: 500px;
+    margin-top: 495px;
     width: 100%;
     background-image: url(assets/img/footer_background.svg);
     background-size: cover;
@@ -1016,5 +1016,44 @@ input::placeholder{
         width: 100%;
         margin-left: 0;
         margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        margin-top: 0; /* Remove large top margin on small screens */
+        background-image: none; /* Optionally hide background image */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Stack columns vertically */
+        width: 100%; /* Full width */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .footer-col-1,
+    .footer-col-2,
+    .footer-col-3,
+    .footer-col-4 {
+        margin: 20px 0; /* Margin between sections */
+        width: 100%; /* Full width */
+        text-align: left; /* Align text to the left */
+    }
+
+    .footer-col-1 {
+        width: 100%; /* Full width */
+    }
+
+    .footer-col-2 {
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .footer-col-3 {
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .footer-col-4 {
+        text-align: left; /* Align text to the left */
+        margin-top: 20px; /* Adjust top margin */
     }
 }
