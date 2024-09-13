@@ -567,6 +567,7 @@ input::placeholder{
     color: #2f4858;
 }
 
+/* Default styles for .send-button button */
 .send-button button {
     /* Box model */
     display: flex;
@@ -588,17 +589,6 @@ input::placeholder{
 
     /* Visual */
     background: #ffa800;
-}
-
-
-.send-button button:hover {
-    /* Visual */
-    background: #ffda16;
-}
-
-.send-button button:active {
-    /* Visual */
-    background: #ff8a00;
 }
 
 /* Tablet and mobile view */
@@ -671,12 +661,14 @@ input::placeholder{
     }
 }
 
+/* .bottom-section */
 .bottom-section {
     display: flex;
     flex-direction: column;
     gap: -30px;
 }
 
+/* .supporters-container */
 .supporters-container {
     /* Positioning */
     position: relative;
@@ -686,9 +678,11 @@ input::placeholder{
     width: 100%;
     margin-top: 150px;
 
+    /* Visual */
     background-image: url(../img/Subtract.svg);
 }
 
+/* .supporters-container-background */
 .supporters-container-background {
     /* Positioning */
     position: absolute;
@@ -700,14 +694,13 @@ input::placeholder{
     width: 100%;
 }
 
+/* .supporters-header */
 .supporters-header {
     /* Positioning */
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     z-index: 4;
-
-    /* Box model */
     margin-top: 100px;
     text-align: center;
 
@@ -718,7 +711,7 @@ input::placeholder{
     color: #2f4858;
 }
 
-/* Default styles for desktop view */
+/* Default styles for .supporters-logos */
 .supporters-logos {
     position: absolute;
     left: 50%;
@@ -730,6 +723,7 @@ input::placeholder{
     gap: 85px;
 }
 
+/* .supporter-img classes */
 .supporter-img-1, .supporter-img-2, .supporter-img-3, .supporter-img-4 {
     width: auto;
     height: 80px;
@@ -745,7 +739,7 @@ input::placeholder{
     margin-top: 218px;
 }
 
-.show-bank-info{
+.show-bank-info {
     display: none;
 }
 
@@ -771,7 +765,7 @@ input::placeholder{
 
 /* Mobile view */
 @media (max-width: 768px) {
-    .supporters-header{
+    .supporters-header {
         margin-top: 83px;
     }
 
@@ -798,6 +792,7 @@ input::placeholder{
     }
 }
 
+/* Mobile view with grid layout */
 @media (max-width: 768px) {
     .supporters-logos {
         margin-top: 180px;
@@ -844,6 +839,7 @@ input::placeholder{
     }
 }
 
+/* .footer */
 .footer {
     display: flex;
     justify-content: center;
@@ -851,28 +847,34 @@ input::placeholder{
     width: 100%;
     background-image: url(assets/img/footer_background.svg);
     background-size: cover;
+
+    /* Typography */
     font-family: "Montserrat";
 }
 
+/* .footer-content */
 .footer-content {
     display: flex;
     flex-direction: row;
     width: 90%; /* Set the content width */
 }
 
+/* Footer columns */
 .footer-col-1 {
     display: flex;
     flex-direction: column;
     width: 182px;
     margin-top: 73px;
     gap: 70px;
+
+    /* Typography */
     font-weight: 500;
     font-size: 14px;
     line-height: 17.07px;
     color: #fff;
 }
 
-.footer-col-2{
+.footer-col-2 {
     display: flex;
     flex-direction: column;
     gap: 21px;
@@ -881,14 +883,14 @@ input::placeholder{
     margin-left: 10%;
 }
 
-.footer-col-2 a{
+.footer-col-2 a {
     font-family: "Montserrat";
     font-weight: 500;
     font-size: 18px;
     line-height: 21.94px;
 }
 
-.footer-col-3{
+.footer-col-3 {
     display: flex;
     flex-direction: column;
     color: #fff;
@@ -897,14 +899,14 @@ input::placeholder{
     width: 287px;
 }
 
-.bank-info{
+.bank-info {
     font-family: "Montserrat";
     font-weight: 500;
     font-size: 18px;
     line-height: 21.94px;
 }
 
-.footer-col-4{
+.footer-col-4 {
     display: flex;
     flex-direction: column;
     text-align: right;
@@ -913,20 +915,21 @@ input::placeholder{
     margin-right: 0;
     margin-left: auto;
 }
-.footer-header{
+
+.footer-header {
     font-family: "Montserrat";
     font-weight: 500;
     font-size: 24px;
     line-height: 29.26px;
 }
 
-.contact-info{
+.contact-info {
     font-family: "Montserrat";
     font-weight: 500;
     font-size: 18px;
 }
 
-.footer-logos{
+.footer-logos {
     display: flex;
     flex-direction: row;
     gap: 29px;
@@ -935,7 +938,7 @@ input::placeholder{
     margin-left: auto;
 }
 
-.policy{
+.policy {
     font-family: "Montserrat";
     font-weight: 500;
     font-size: 14px;
@@ -943,7 +946,7 @@ input::placeholder{
     margin-top: 14%;
 }
 
-/* Media query for screens up to 1366px */
+/* Media queries for .footer and .supporters-container */
 @media (max-width: 1366px) {
     .footer {
         margin-top: 430px; /* Reset margin to avoid extra space */
@@ -956,7 +959,6 @@ input::placeholder{
     }
 }
 
-/* Media query for screens up to 1024px */
 @media (max-width: 1024px) {
     .footer {
         margin-top: 240px; /* Reset margin to avoid extra space */
@@ -969,7 +971,6 @@ input::placeholder{
     }
 }
 
-/* Media query for screens up to 768px (general adjustments) */
 @media (max-width: 768px) {
     .footer {
         margin-top: 50px; /* Adjust margin for smaller screens */
@@ -1018,7 +1019,7 @@ input::placeholder{
         margin: 20px 0 0 0; /* Adjust margins */
     }
 
-    .show-bank-info{
+    .show-bank-info {
         display: block;
         margin-top: 10px;
         font-weight: 700;
