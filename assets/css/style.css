@@ -284,17 +284,21 @@ input::placeholder{
     display: block;
 }
 
-/* Stacked images */
-.img-stack {
-    margin-top: 19px;
-    grid-template-rows: repeat(2, 1fr);
-}
-
-.img-stack img {
+.img3-4 {
     width: 100%;
-    height: 205px;
+  }
+  
+  .img3-4 .stacked {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+  }
+  
+  .img3-4 img {
+    width: 100%;
+    height: 50%; /* Each image takes up half the height of the cell */
     object-fit: cover;
-}
+  }
 
 /* Adjust collage positioning */
 .collage {
@@ -667,6 +671,12 @@ input::placeholder{
     }
 }
 
+.bottom-section {
+    display: flex;
+    flex-direction: column;
+    gap: -30px;
+}
+
 .supporters-container {
     /* Positioning */
     position: relative;
@@ -733,6 +743,10 @@ input::placeholder{
 
 .supporter-img-1, .supporter-img-2, .supporter-img-3 {
     margin-top: 218px;
+}
+
+.show-bank-info{
+    display: none;
 }
 
 /* Tablet view */
@@ -929,9 +943,10 @@ input::placeholder{
     margin-top: 14%;
 }
 
+/* Media query for screens up to 1366px */
 @media (max-width: 1366px) {
     .footer {
-        margin-top: 370px; /* Reset margin to avoid extra space */
+        margin-top: 430px; /* Reset margin to avoid extra space */
         z-index: 1;
     }
 
@@ -941,6 +956,7 @@ input::placeholder{
     }
 }
 
+/* Media query for screens up to 1024px */
 @media (max-width: 1024px) {
     .footer {
         margin-top: 240px; /* Reset margin to avoid extra space */
@@ -953,22 +969,13 @@ input::placeholder{
     }
 }
 
-@media (max-width: 768px) {
-    .footer {
-        margin-top: -35px; /* Reset margin to avoid extra space */
-        z-index: 2;
-        justify-content: left;
-    }
-
-    .supporters-container {
-        margin-bottom: 0; /* Reset margin if necessary */
-        z-index: 1;
-    }
-}
-
+/* Media query for screens up to 768px (general adjustments) */
 @media (max-width: 768px) {
     .footer {
         margin-top: 50px; /* Adjust margin for smaller screens */
+        z-index: 2;
+        justify-content: left;
+        background-image: none; /* Optionally hide background image */
     }
 
     .footer-content {
@@ -982,78 +989,40 @@ input::placeholder{
         display: none; /* Hide on smaller devices */
     }
 
-    .footer-col-1 img{
+    .footer-col-1 img {
         width: 100px;
     }
 
     /* Footer-col-4 content next */
     .footer-col-4 {
         width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 0;
-        margin-bottom: 20px; /* Add spacing between sections */
+        margin: 0 0 20px 0; /* Margin between sections */
+        text-align: left; /* Align text to the left */
     }
 
     /* Footer logos */
     .footer-logos {
         width: 100%;
-        margin-left: 0;
-        margin-top: 20px;
-        margin-bottom: 20px; /* Spacing between logos and next content */
+        margin: 20px 0; /* Spacing between logos and next content */
     }
 
     /* Footer-col-1 content */
     .footer-col-1 {
         width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 20px; /* Add spacing after footer-col-1 */
+        margin: 0 0 20px 0; /* Add spacing after footer-col-1 */
     }
 
     /* Policy last */
     .policy {
         width: 100%;
-        margin-left: 0;
-        margin-top: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .footer {
-        margin-top: 0; /* Remove large top margin on small screens */
-        background-image: none; /* Optionally hide background image */
+        margin: 20px 0 0 0; /* Adjust margins */
     }
 
-    .footer-content {
-        flex-direction: column; /* Stack columns vertically */
-        width: 100%; /* Full width */
-        align-items: flex-start; /* Align items to the start */
-    }
-
-    .footer-col-1,
-    .footer-col-2,
-    .footer-col-3,
-    .footer-col-4 {
-        margin: 20px 0; /* Margin between sections */
-        width: 100%; /* Full width */
-        text-align: left; /* Align text to the left */
-    }
-
-    .footer-col-1 {
-        width: 100%; /* Full width */
-    }
-
-    .footer-col-2 {
-        margin-left: 0; /* Remove left margin */
-    }
-
-    .footer-col-3 {
-        margin-left: 0; /* Remove left margin */
-    }
-
-    .footer-col-4 {
-        text-align: left; /* Align text to the left */
-        margin-top: 20px; /* Adjust top margin */
+    .show-bank-info{
+        display: block;
+        margin-top: 10px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17.07px;
     }
 }
