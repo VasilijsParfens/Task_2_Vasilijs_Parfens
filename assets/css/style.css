@@ -1065,7 +1065,7 @@ input::placeholder{
 @media (max-width: 1024px) {
     .footer {
         margin-top: 240px; /* Reset margin to avoid extra space */
-        z-index: 1;
+        z-index: 2;
     }
 
     .supporters-container {
@@ -1074,18 +1074,18 @@ input::placeholder{
     }
 }
 
-@media (max-width: 768px) {
-    .footer {
-        margin-top: 50px; /* Adjust margin for smaller screens */
-        z-index: 2;
-        justify-content: left;
-        background-image: none; /* Optionally hide background image */
+@media (max-width: 544px) {
+    .footer{
+        margin-top: -54px;
     }
+}
 
+@media (max-width: 768px) {
     .footer-content {
         flex-direction: column; /* Stack everything vertically */
         align-items: flex-start; /* Align items to the left */
         width: 100%;
+        margin-left: 20px;
     }
 
     /* Hide footer columns 2 and 3 */
@@ -1100,7 +1100,7 @@ input::placeholder{
     /* Footer-col-4 content next */
     .footer-col-4 {
         width: 100%;
-        margin: 0 0 20px 0; /* Margin between sections */
+        margin: 25px 0 20px 0; /* Margin between sections */
         text-align: left; /* Align text to the left */
     }
 
@@ -1113,13 +1113,20 @@ input::placeholder{
     /* Footer-col-1 content */
     .footer-col-1 {
         width: 100%;
-        margin: 0 0 20px 0; /* Add spacing after footer-col-1 */
+        margin: 73px 0 20px 0; /* Add spacing after footer-col-1 */
+    }
+
+    .footer-col-1 p{
+        position: absolute;
+        margin-top: 425px;
+        font-size: 11px;
     }
 
     /* Policy last */
     .policy {
         width: 100%;
         margin: 20px 0 0 0; /* Adjust margins */
+        font-size: 11px;
     }
 
     .show-bank-info {
